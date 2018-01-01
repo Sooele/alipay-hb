@@ -13,11 +13,6 @@ module.exports = {
         path: __dirname + '/dist'
     },
     module: {
-        loaders: [{
-            test: require.resolve('zepto'),
-            loader: 'exports-loader?window.Zepto!script-loader'
-        }],
-
         rules: [{
             test: /\.css$/,
             use: ExtractTextPlugin.extract(['css-loader'])
@@ -40,7 +35,7 @@ module.exports = {
             },
         }),
         new HtmlWebpackPlugin({
-            title: '我的收款码',
+            title: '支付宝红包推广页',
             filename: "index.html",
             template: "src/index.html",
             inject: true,
