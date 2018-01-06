@@ -75,12 +75,11 @@ $(function () {
             return;
         }
 
-        
         if (uaCheck.isSjQQ()) {
             $(".modal-tip").css("height", $(window).height);
             $(".modal-tip").show();
             if (typeof mqq.ui.openUrl != "undefined") {
-                mqq.ui.openUrl({target: 2,url: shareUrl});
+                mqq.ui.openUrl({ target: 2, url: shareUrl });
             }
             return;
         }
