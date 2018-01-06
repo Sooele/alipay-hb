@@ -26,6 +26,7 @@ module.exports = {
             $: "jquery"
         }),
         new webpack.optimize.UglifyJsPlugin({
+            beautify: true,
             compress: {
                 warnings: false
             },
@@ -33,6 +34,14 @@ module.exports = {
                 // 去掉注释内容
                 comments: false,
             },
+            except: ['$', 'jQuery', 'require', 'exports', 'import'],
+            uglifyOptions: {
+                ie8     : true,
+                ecma    : 6,
+                mangle  : true,
+                compress: true,
+                warnings: false
+            }
         }),
         new HtmlWebpackPlugin({
             title: '支付宝红包推广页',
